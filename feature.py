@@ -55,11 +55,11 @@ def generate_data_set(url):
      
     # 2.LongURL
     if len(url) < 54:
-        data_set.append(1)
+        data_set.append(1)  # Not phishing
     elif len(url) >= 54 and len(url) <= 75:
-        data_set.append(0)
+        data_set.append(0)  # Can't say
     else:
-        data_set.append(-1)
+        data_set.append(-1) # phishing
 
      
     # 3.ShortURL
@@ -448,4 +448,3 @@ def generate_data_set(url):
         
 
     return data_set
-

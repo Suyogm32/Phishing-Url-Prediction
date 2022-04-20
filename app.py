@@ -51,6 +51,9 @@ def predict():
         #     return render_template('index.html',x =y_pro_non_phishing,url=url )
     return render_template("index.html", xx =-1)
 
+@app.route('/test', methods=['GET'])
+def get_phish():
+    return render_template('phishing.html')
 
 if __name__ == "__main__":
     app.run(debug=True)
